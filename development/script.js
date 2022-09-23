@@ -52,17 +52,20 @@ activities[i].addClass('future')
 // save activities
 var saveBtn = $('.saveBtn')
 var activityInput = $('.col-10')
+
 var activityValue = activityInput.val();
 console.log(activityValue)
 
 console.log(activityInput)
 
+var acts = localStorage.getItem('acts'); //get item.
+activityInput.textContent = acts //display item.
+
 function saveAct (event){
   var element = event.target;
   if (element.matches(".Btn")){
-  var activityValue = activityInput.val();
-  console.log(activityValue)
-  localStorage.setItem("activityValue", activityValue);
+  activityInput.textContent = acts
+  localStorage.setItem('acts', act); //storage in local
 }}
 
-saveBtn.on("click", saveAct);
+saveBtn.on('click', saveAct);
