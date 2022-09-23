@@ -16,8 +16,9 @@ N/A
 ![Screenshot of the use image](development/img/screenshot.png)
 
 Link:
- - https://kayexie.github.io/math-quiz-challenge/
- - https://github.com/Kayexie/math-quiz-challenge
+- https://kayexie.github.io/work-day-planner/
+- https://github.com/Kayexie/work-day-planner
+
 
 
 ## Credits
