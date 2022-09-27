@@ -50,22 +50,51 @@ activities[i].addClass('future')
 
 
 // save activities
-var saveBtn = $('.saveBtn')
-var activityInput = $('.col-10')
+var saveBtn = $('.fa-save')//save button
+var activityInput = $('.col-10')//textarea
 
-var activityValue = activityInput.val();
-console.log(activityValue)
+activityInput.innerHTML=localStorage.getItem('saveThing')
 
-console.log(activityInput)
+for (i=0; i<activities.length; i++) {
 
-var acts = localStorage.getItem('acts'); //get item.
-activityInput.textContent = acts //display item.
+activityInput.innerHTML = localStorage.getItem('saveThing')
 
-function saveAct (event){
-  var element = event.target;
-  if (element.matches(".Btn")){
-  activityInput.textContent = acts
-  localStorage.setItem('acts', act); //storage in local
-}}
+  function saveAct() {
+  localStorage.setItem('saveThing', activityInput[i].value)
+}
 
-saveBtn.on('click', saveAct);
+saveBtn.on('click', saveAct)
+}
+
+
+
+
+// function todo(){
+//   console.log(target.value)};  //target means activity's input
+//   activityInput.textContent = target.value
+
+// activityInput.on('input', todo)
+
+
+// function saveLocal() {
+//  localStorage.setItem('activityInput', 'act')
+// }
+
+// var activityValue = activityInput.val();
+
+// console.log(activityValue)
+
+// console.log(activityInput)
+
+// var acts = localStorage.getItem('acts'); //get item.
+// activityInput.textContent = acts //display item.
+
+// function saveAct (event){
+//   var element = event.target;
+//   for (i=0; i<activities.length; i++){
+//   if (element.matches(".Btn")){
+//      activities[i].textContent = acts
+//   localStorage.setItem('acts', act); //storage in local
+// }}}
+
+// saveBtn.on('click', saveAct);
